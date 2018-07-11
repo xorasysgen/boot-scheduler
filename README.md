@@ -3,6 +3,8 @@ Scheduling Tasks using spring boot - Create a scheduled task
 
 #The components that build a cron expression.
 
+By default, will be searching for an associated scheduler definition: either a unique TaskScheduler bean in the context, or a TaskScheduler bean named "taskScheduler" otherwise; the same lookup will also be performed for a ScheduledExecutorService bean. If neither of the two is resolvable, a local single-threaded default scheduler will be created and used within the registrar.
+
 Seconds can have values 0-59 or the special characters , - * / .
 
 Minutes can have values 0-59 or the special characters , - * / .
